@@ -5,7 +5,10 @@
         body{
             padding-left: 25rem;
         }
-        	.box{
+        .boto{
+            margin-left: 15rem;
+        }
+        .box{
     background: #708090;
     border-radius: 10px;
     height: 42rem;
@@ -14,6 +17,17 @@
     text-align: justify;
     font-size: 25px;
     padding: 1rem;
+    }
+    @media print{
+        body {
+            padding: 0;
+        }
+        .botoes{
+            visibility: hidden;
+        }
+        .box{
+            margin: 0;
+        }
     }
     </style>
     <div class="box">
@@ -51,7 +65,10 @@ Queijo
 <br>
 </div>
 <br>
-<button style="margin-left: 18rem;" class="btn btn-success">Cadastrar</button>
+<div class="botoes">
+<button  class="btn btn-success boto">Cadastrar</button>
+<button  class="btn btn-success" onclick="window. print()">Imprimir pagina</button>
+</div>
 </form>
 <?php
 if ($_POST) {
